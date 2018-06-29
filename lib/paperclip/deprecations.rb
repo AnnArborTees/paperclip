@@ -31,7 +31,7 @@ module Paperclip
       end
 
       def aws_sdk_version
-        ::AWS::VERSION
+        "3.0"
       end
 
       def warn(message)

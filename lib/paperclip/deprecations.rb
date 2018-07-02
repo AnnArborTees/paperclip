@@ -4,7 +4,8 @@ module Paperclip
   class Deprecations
     class << self
       def check
-        warn_aws_sdk_v1 if aws_sdk_v1?
+        # warn_aws_sdk_v1 if aws_sdk_v1?
+        # Don't care about this right now.
         warn_outdated_rails if active_model_version < "4.2"
       end
 
@@ -31,7 +32,7 @@ module Paperclip
       end
 
       def aws_sdk_version
-        "3.0"
+        "1.67.0"
       end
 
       def warn(message)
